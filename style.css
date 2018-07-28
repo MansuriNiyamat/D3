@@ -1,0 +1,438 @@
+.chart1 rect { fill: steelblue; }
+#tooltip {
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    width: 60px; height: 40px;
+    background: white;
+    border: 0px;
+    pointer-events: none;
+	
+}
+
+#chart1{
+	background-color: #F5F2EB;
+	border: 1px solid #CCC;
+	height:500px
+}
+.bar{
+	fill: purple;
+	shape-rendering: crispEdges;
+}
+.bar-label{
+	fill: #000;
+	text-anchor: middle;
+	font-size: 18px;
+}
+
+
+.axis path,
+.axis line{
+	fill: none;
+	stroke: #B3B3B3;
+	shape-rendering: crispEdges;
+	
+}
+
+.axis text {
+			font-size: 10px;
+			fill: #6B6B6B;
+		}
+		
+		
+.countries {
+			pointer-events: none;
+		}
+
+		.circle-wrapper {
+			fill: none;
+			pointer-events: all;
+		}
+
+		.guide {
+			pointer-events: none;
+			font-size: 14px;
+			font-weight: 600;
+		}
+		
+		.popover {
+			pointer-events: none;
+		}
+
+		
+			
+	.legendCircle {
+			stroke-width:1;
+			stroke:#999;
+			stroke-dasharray:2 2;
+			fill:none;
+		}
+
+		.legendLine {
+			stroke-width: 1;
+			stroke: #D1D1D1;
+			shape-rendering: crispEdges;
+		}
+
+		.legendTitle {
+			fill: #1A1A1A;
+			color: #1A1A1A;
+			text-anchor: middle;
+			font-size: 10px;
+		}
+
+		.legendText {
+			fill: #949494;
+			text-anchor: start;
+			font-size: 9px;
+		}
+		
+		@media (min-width: 500px) {
+		  .col-sm-3, .col-sm-9 {
+			float: left;
+		  }
+		  .col-sm-9 {
+			width: 75%;
+		  }
+		  .col-sm-3 {
+			width: 25%;
+		  }
+		}
+				
+		
+		
+		
+		
+		
+		
+		
+.gridline path,
+.gridline line{
+	fill: none;
+	stroke: #ccc;
+	shape-rendering: crispEdges;
+}
+
+body,html {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+	padding: 0;
+	font-family: "Arial", sans-serif;
+	font-size: 0.95em;
+	text-align: left-side;
+}
+
+
+.chart-wrapper {
+    max-width: 950px;
+    min-width: 304px;
+    margin: 0 auto;
+    background-color: #FAF7F7;
+}
+
+.chart-wrapper .inner-wrapper {
+    position: relative;
+    padding-bottom: 50%;
+    width: 100%;
+}
+
+.chart-wrapper .outer-box {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+.chart-wrapper .inner-box {
+    width: 100%;
+    height: 100%;
+}
+
+.chart-wrapper text {
+  font-family: sans-serif;
+  font-size: 11px;
+}
+
+.chart-wrapper p {
+    font-size: 16px;
+    margin-top:5px;
+    margin-bottom: 40px;
+}
+
+.chart-wrapper .axis path,
+.chart-wrapper .axis line {
+    fill: none;
+    stroke: #1F1F2E;
+    stroke-opacity: 0.7;
+    shape-rendering: crispEdges;
+
+}
+.chart-wrapper .axis path {
+  stroke-width: 2px;
+}
+
+.chart-wrapper .line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 5px;
+}
+
+.chart-wrapper .legend  {
+    min-width: 200px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-size: 16px;
+    padding: 10px 40px;
+}
+.chart-wrapper .legend > div {
+    margin: 0px 25px 10px 0px;
+    flex-grow: 0;
+}
+.chart-wrapper .legend p {
+    display:inline;
+    font-size: 0.8em;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.chart-wrapper .legend .series-marker {
+    height: 1em;
+    width: 1em;
+    border-radius: 35%;
+    background-color: crimson;
+    display: inline-block;
+    margin-right: 4px;
+    margin-bottom: -0.16rem;
+}
+
+.chart-wrapper .overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.chart-wrapper .focus circle {
+  fill: crimson;
+  stroke: crimson;
+  stroke-width: 2px;
+  fill-opacity: 15%;
+}
+.chart-wrapper .focus rect {
+    fill: lightblue;
+    opacity: 0.4;
+    border-radius: 2px;
+}
+.chart-wrapper .focus.line {
+    stroke: steelblue;
+    stroke-dasharray: 2,5;
+    stroke-width: 2;
+    opacity: 0.5;
+}
+@media (max-width:500px){
+    .chart-wrapper .line {stroke-width: 3px;}
+    .chart-wrapper .legend {font-size: 14px;}
+}
+
+#sectionImage1{
+    background-image: url(https://harimanan.github.io/World-Map.jpg);
+}
+
+
+
+  
+  rect {
+	fill: transparent;
+	shape-rendering: crispEdges;
+  }
+  
+  .axis path,
+  .axis line {
+	fill: none;
+	stroke: rgba(0, 0, 0, 0.1);
+	shape-rendering: crispEdges;
+  }
+  
+  .axisLine {
+	fill: none;
+	shape-rendering: crispEdges;
+	stroke: rgba(0, 0, 0, 0.5);
+	stroke-width: 2px;
+  }
+  
+  .dot {
+	fill-opacity: .5;
+  }
+  
+  .d3-tip {
+	line-height: 1;
+	font-weight: bold;
+	padding: 12px;
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	border-radius: 2px;
+  }
+  
+  /* Creates a small triangle extender for the tooltip */
+  .d3-tip:after {
+	box-sizing: border-box;
+	display: inline;
+	font-size: 10px;
+	width: 100%;
+	line-height: 1;
+	color: rgba(0, 0, 0, 0.8);
+	content: "\25BC";
+	position: absolute;
+	text-align: center;
+  }
+  
+  /* Style northward tooltips differently */
+  .d3-tip.n:after {
+	margin: -1px 0 0 0;
+	top: 100%;
+	left: 0;
+  }
+
+
+/*starting of line chart*/
+.nvtooltip {
+	position: absolute;
+	background-color: rgba(255,255,255,1);
+	padding: 10px;
+	border: 1px solid #ddd;
+  
+	font-family: Arial;
+	font-size: 13px;
+  
+	transition: opacity 500ms linear;
+	-moz-transition: opacity 500ms linear;
+	-webkit-transition: opacity 500ms linear;
+  
+	transition-delay: 500ms
+	-moz-transition-delay: 500ms;
+	-webkit-transition-delay: 500ms;
+  
+	-moz-box-shadow: 4px 4px 12px rgba(0,0,0,.5);
+	-webkit-box-shadow: 4px 4px 12px rgba(0,0,0,.5);
+	box-shadow: 4px 4px 12px rgba(0,0,0,.5);
+  
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+  }
+  
+  .nvtooltip h3 {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+  }
+  
+  .nvtooltip p {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+  }
+  
+  .nvtooltip span {
+	display: inline-block;
+	margin: 2px 0;
+  }
+  
+  
+  
+  
+  
+  /**********
+  *  General SVG CSS
+  */
+  
+  
+  text {
+	font: 12px sans-serif;
+  }
+  
+  
+  
+  /**********
+  *  Legend
+  */
+  
+  .legend .series {
+	cursor: pointer;
+  }
+  
+  .legend circle {
+	stroke-width: 2px;
+  }
+  
+  .legend .disabled circle {
+	fill-opacity: 0;
+  }
+  
+  
+  
+  /**********
+  *  Axes
+  */
+  
+  .axis path {
+	fill: none;
+	stroke: #000;
+	stroke-opacity: .75;
+	shape-rendering: crispEdges;
+  }
+  
+  .axis path.domain {
+	stroke-opacity: .75;
+  }
+  
+  .axis line {
+	fill: none;
+	stroke: #000;
+	stroke-opacity: .25;
+	shape-rendering: crispEdges;
+  }
+  
+  .axis line.zero {
+	stroke-opacity: .75;
+  }
+  
+  
+  
+  /**********
+  *  Line chart
+  */
+  
+  .point-paths path {
+	/*
+	fill: #eee;
+	stroke: #aaa;
+	*/
+	stroke-opacity: 0;
+	fill-opacity: 0;
+  }
+  
+  
+  .lines path {
+	fill: none;
+	stroke-width: 1.5px;
+	stroke-linecap: round;
+  
+	transition: stroke-width 250ms linear;
+	-moz-transition: stroke-width 250ms linear;
+	-webkit-transition: stroke-width 250ms linear;
+  
+	transition-delay: 250ms
+	-moz-transition-delay: 250ms;
+	-webkit-transition-delay: 250ms;
+  }
+  
+  .line.hover path {
+	stroke-width: 6px;
+  }
+  
+  .lines .point {
+	transition: stroke-width 250ms linear;
+	-moz-transition: stroke-width 250ms linear;
+	-webkit-transition: stroke-width 250ms linear;
+  }
+  
+  .lines .point.hover {
+	stroke-width: 20px;
+	stroke-opacity: .5;
+  }

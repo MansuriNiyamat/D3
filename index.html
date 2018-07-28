@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta charset="UTF-8">
+
+
+
+	<link rel="stylesheet" href="style.css" charset="utf-8">
+
+	<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="jquery-1.11.3.js"></script>
+
+	<script src="jquery.fullPage.min.js"></script>
+	<link rel="stylesheet" href="jquery.fullPage.css">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Oxigen|Open+Sans" rel="stylesheet">
+	<!-- Open Sans & CSS -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400,300' rel='stylesheet' type='text/css'>
+
+
+
+	<style>
+	</style>
+
+
+
+</head>
+
+<body>
+	<div id="wrapper">
+
+		<div class="section" id="sectionImage1" style="width:100%; height:100%; padding-left:3%; padding-right:1.5%;">
+			<div style="float: left; color: white; width: 60%;">
+				<div style="font-size: 40px; font-weight: bold; color:#afeeee">On an average, do wealthier countries live longer?
+					<br/>
+				</div>
+				<p style="font-size: 25px; -webkit-margin-before: 0.2em; -webkit-margin-after: 0.2em; color:afeeee;">Economic Growth and Life Expectancy </p>
+				<br/>
+				<div class="bodyText">
+					<div style="font-size: 16px; font-weight: bold; color:afeeee;"> Relation between Income and Life Expectancy</div>
+					</br>
+					This project explores the connection between per capita GDP and life expectancy through various interactive visualizations.
+					By interacting with the visualizations the viewer can draw his/her own inferences.</br>
+					</br>
+
+					<div style="font-size: 16px; font-weight: bold; color:afeeee;">Comparison of Life Expectancy Across Regions </div>
+					</br>
+					We will compare Average Life Expectancy across Regions through an interactive Bar-graph.
+
+					<div style="font-size: 16px; font-weight: bold; color:afeeee;">
+						</br>GDP vs Life Expectancy</div>
+					</br>
+					By using a scatterplot and a vornoi diagram, we will see when we hover over an circle, what is the country name, what is
+					the life expectancy and what is the per capita GDP.
+					</br>
+					</br>
+
+					<div style="font-size: 16px; font-weight: bold; color:afeeee;">Income Groups</div>
+					</br>
+					We will see the life expectancy changes across income groups. </br>
+					</br>
+
+					<div style="font-size: 16px; font-weight: bold; color:afeeee;">Visualize and Draw Inferences</div>
+					</br>
+
+					Over the next few slides we will have the opportunity to explore the data and interact with the visualizations.</div>
+			</div>
+
+		</div>
+
+
+		<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:1%;">
+			<div style="float: right; width: 70%; text-align: center;">
+				<div style="padding-right: 140px; font-size: 20px; font-weight: bold;">Average Life Expectancy Across Regions
+					<br/>
+				</div>
+
+				<div id="tooltip"></div>
+				<svg id="barchart1" width="800" height="500"></svg>
+				<div id="controls"></div>
+
+
+			</div>
+			<div style="float: left; width: 30%;">
+				<p style="font-size: 40px; font-weight: bold; color:#1a1a1a;">Does Life Expectancy vary between Regions?
+					<br/>
+				</p>
+				<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Bar-graph of life expectancy</p>
+				<p class="bodyText">Life Expectancy is clearly different between different regions.</p>
+				<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Interact with Bar-graph and Button</p>
+				<p class="bodyText">Click on the Sort button to view life expectancy of Regions in ascending or descending order. Hover your mouse over the
+					bars to view the tooltip on Regions and Average Life Expectancy.</p>
+			</div>
+		</div>
+
+
+		<div class="section" style="width:100%; height:100%; padding-left:2.5%; padding-right:7%;">
+
+			<div style="float: left; width: 70%;">
+
+
+				<div style="padding-left: 140px; font-size: 20px; font-weight: bold;">Scatterplot with
+					<span id="title">Voronoi</span>
+					<br/>
+					<br/>
+				</div>
+
+				<div id="cont" class="container-fluid text-center">
+					<div class="row scatter">
+						<h5 style="color: #3B3B3B;">Life expectancy versus GDP per Capita</h5>
+						<h6 style="color: #A6A6A6;">Voronoi clipped circles </h6>
+						<div class="col-sm-9">
+							<div id="chart">
+								<svg></svg>
+							</div>
+						</div>
+						<div id="legend" class="col-sm-3" style="padding-right: 0px; padding-left: 0px;">
+						
+							<div id="legend"></div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+			</div>
+			<div style="float: right; width: 30%;">
+				<p style="font-size: 45px; font-weight: bold; color:#1a1a1a;">Life Expectancy vs GDP
+					<br/>
+				</p>
+				<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Life Expectancy vs GDP in 2010 </p>
+				<p class="bodyText">
+					We dive deeper into the relation between Life Expectancy and GDP by observing the scatterplot and infer that with the per
+					capita GDP increased in various countries, life expectancy increased across various countries and regions of the world
+					in 2010. It looks like there is a correlation between these two elements, year by year GDP per capita grows and Life
+					Expectancy increases. Clearly if you hover your mouse over the Regions in Africa, the countries there have a low life
+					expectancy and low GDP. Viewer can draw his own inferences based on this scatterplot.
+
+				</p>
+
+				<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Interact with the Scatter Plot</p>
+				<p class="bodyText">Hover your mouse over the circles to view the country&#39;s life expectancy in years on y-axis and per capita GDP on
+					x-axis. The size of the circles is proportional to GDP per capita to remark the difference in the graph. The Regions
+					and countries within that region are shown in the legend. Hover your mouse over regions in the legend to view the countries
+					in that region.</p>
+			</div>
+		</div>
+
+
+		
+
+
+		<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:7%;">
+			<div style="float: right; width: 50%;">
+				<div style="padding-left:6%;">
+					<p style="font-size: 15px; font-weight: bold; color:#1a1a1a;">&nbsp;</p>
+
+					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Parameters</p>
+					<p class="bodyText">
+
+						Several parameters are included in the visualizations. In the bar-graph, there is a sort button that sorts the life expectancy
+						across various regions in ascending and descending order. In the multiline graph as the user hovers his mouse over
+						the line charts, he/she can see the year and the life expectancy across the four income groups. In the vornoi diagram
+						as the user hovers the mouse over a circle, he/she can see the country, the per capita GDP and life expectancy for
+						that country. The size of the circle represents the per capita GDP dollar amount for a country.
+
+
+					</p>
+
+					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Triggers</p>
+					<p class="bodyText">
+
+
+						There are several triggers that make the visualizations interactive and the user can play with the data by clicking on buttons,
+						hovering over the line charts, bargraphs, vornoi diagrams. By selecting the values in the legends in the vornoi diagram,
+						the viewer can filter the countries in that region and see the life expectancy of the countries of that region. By
+						doing so the viewer can easily identify that the countries in African region have lower per capita GDP as well as lower
+						life expectancy. </p>
+
+					<p class="bodyText">
+
+						User interface events are listed, along with a description of how possible user events are communicated to the viewer.
+
+					</p>
+
+
+
+
+				</div>
+			</div>
+			<div style="float: left; width: 50%;">
+				<p style="font-size: 40px; font-weight: bold; color:#1a1a1a;">About the visualization
+					<br/>
+				</p>
+
+				<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">The Narrative Visualization</p>
+
+				<p class="bodyText">
+					Do wealthier countries live longer? - This narrative visualization follows an interactive slideshow and is built with scenes,
+					annotations, parameters, and triggers. The scenes follow a uniform template for visual consistency and are ordered to
+					best convey the message that there is some correlation between Income and Life Expectancy across years from 1960 to
+					2015. Guidance is provided on each slide and viewer is able to explore the data through the visualizations.
+
+
+
+				</p>
+
+				<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Scenes in the Visualization</p>
+
+				<p class="bodyText">
+					The narrative starts with a powerful world image and a question whether wealthier countries live longer. Following this,
+					there are bar-graphs, multi-line charts and vornoi diagrams that explore the correlation between life expectancy across
+					regions, across income groups and across GDP of a country respectively. The layout and any visual structure in these
+					scenes makes a viewer wonder the power of data visualization and explore further.
+
+
+				</p>
+
+				<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Annotations</p>
+				<p class="bodyText">
+
+					The annotations follow a template for visual consistency and highlight specific data items or trends. At each visualization,
+					there is a description indicating the annotations. The first scene has a bar-graph that shows the average life expectancy
+					across regions of the world. After that each slide has annotations that guide the user to draw a conclusion and/or explore
+					further in the data. All annotations are cleared on each slide and are independent of each other. All of them use the
+					same font for visual consistency. When the user hovers over his mouse over the graphs, the tool-tips help navigate the
+					data in the visualization. </p>
+			</div>
+		</div>
+
+
+		<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:7%;">
+			<div style="float: right; width: 50%;">
+				<div style="padding-left:6%;">
+					<p style="font-size: 40px; font-weight: bold; color:#1a1a1a;">Resources</br>
+					</p>
+					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Links</p>
+
+					<p class="bodyText">-
+						<a href=https://github.com/alvarotrigo/fullPage.js>FullPage.js</a>
+						</br>
+						-
+						<a href=http://data.worldbank.org/indicator/NY.GDP.PCAP.CD>Data from Worldbank on GDP Per Capita</a>
+						</br>
+						-
+						<a href=http://data.worldbank.org/indicator/NY.GDP.PCAP.CD>Data from Worldbank on GDP Per Capita</a>
+						</br>
+						-
+						<a href=http://data.worldbank.org/indicator/SP.DYN.LE00.IN>Data from Worldbank on Life Expectancy</a>
+						</br>
+						-
+						<a href=https://bl.ocks.org/d3noob/4db972df5d7efc7d611255d1cc6f3c4f>Multiline graph</a>
+						</br>
+						-
+						<a href=http://bl.ocks.org/nbremer/61cd485e399b6a71d5fb2b1072fbc6c1>Vornoi Scatterplot</a>
+						</br>
+					</p>
+				</div>
+			</div>
+			<div style="float: left; width: 50%;">
+				<p style="font-size: 40px; font-weight: bold; color:#1a1a1a;">About the author
+					<br/>
+				</p>
+				<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">D3 Project</p>
+				<p class="bodyText">CS 498: Data Visualization Project from University of Illinois Urbana-Champaign.</p>
+				<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">The author</p>
+				<p class="bodyText"> Know more about the author:
+					<a href=https://www.linkedin.com/in/harimanan/>Hari Manan</a>
+				</p>
+				<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Disclaimer</p>
+				<p class="bodyText">This Visualization was made to satisfy the requirements of the Data Visualization Project for UIUC. All the code that
+					was modified as a base to create some of the elements of the visualization is under the MIT Open License.</p>
+			</div>
+		</div>
+	</div>
+
+
+	<a id="footer" href="#About">About this visualization</a>
+
+
+	//Barchart
+	<script src="http://mbostock.github.com/d3/d3.v2.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.7/d3-tip.js">	 </script>
+	<script type="text/javascript" src="barchartcanvas.js" charset="utf-8"></script> 
+
+	<script src="nvtooltip.js"></script>
+	<script src="d3legend.js"></script>
+	<script src="d3line.js"></script>
+	<script src="d3linewithlegend.js"></script> 
+	<script>
+
+
+		// ************ Initialize fullpage.js ***************
+
+		$(document).ready(function () {
+			$('#wrapper').fullpage({
+				sectionsColor: ['#FFFF99', '#f2f2f2', '#ffffff', 'whitesmoke', '#EAE1C0', '#ccddff'],
+				navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['Introduction', 'Regions Life Expectancy', 'GDP vs Life Expectancy', 'Income Groups', 'About the Visualization', 'Author and Resources'],
+				anchors: ['Intro', 'Regions', 'GDP', 'Income-Groups', 'About', 'Author'],
+				easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
+
+			});
+
+			var margin = { top: 30, right: 10, bottom: 50, left: 60 },
+				chart = d3LineWithLegend()
+					.xAxis.label('Years')
+					.width(width(margin))
+					.height(height(margin))
+					.yAxis.label('Perpetrator Count');
+
+
+			var svg = d3.select('#chart svg')
+				.datum(generateData())
+
+			svg.transition().duration(500)
+				.attr('width', width(margin))
+				.attr('height', height(margin))
+				.call(chart);
+
+
+			chart.dispatch.on('showTooltip', function (e) {
+				var offset = $('#chart').offset(), // { left: 0, top: 0 }
+					left = e.pos[0] + offset.left,
+					top = e.pos[1] + offset.top,
+					formatter = d3.format("");
+
+				var content = '<h3>' + e.series.label + '</h3>' +
+					'<p>' +
+					'<span class="value">Year : ' + e.point[0] + '<br>Count: ' + formatter(e.point[1]) + '</span>' +
+					'</p>';
+
+				nvtooltip.show([left, top], content);
+			});
+
+			chart.dispatch.on('hideTooltip', function (e) {
+				nvtooltip.cleanup();
+			});
+
+			$(window).resize(function () {
+				var margin = chart.margin();
+
+				chart
+					.width(width(margin))
+					.height(height(margin));
+
+				d3.select('#chart svg')
+					.attr('width', width(margin))
+					.attr('height', height(margin))
+					.call(chart);
+
+			});
+
+			function width(margin) {
+				var w = 900;// $(window).width() - 20;
+
+				return ((w - margin.left - margin.right - 20) < 0) ? margin.left + margin.right + 2 : w;
+			}
+
+			function height(margin) {
+				var h = 600;//$(window).height() - 20;
+
+				return (h - margin.top - margin.bottom - 20 < 0) ?
+					margin.top + margin.bottom + 2 : h;
+			}
+
+
+			//data
+			function generateData() {
+				var temp = [{ "data": [["1980", "398"], ["1981", "315"], ["1982", "304"], ["1983", "287"], ["1984", "232"], ["1985", "205"], ["1986", "211"], ["1987", "238"], ["1988", "262"], ["1989", "270"], ["1990", "324"], ["1991", "375"], ["1992", "310"], ["1993", "359"], ["1994", "423"], ["1995", "379"], ["1996", "333"], ["1997", "317"], ["1998", "258"], ["1999", "256"], ["2000", "269"], ["2001", "264"], ["2002", "284"], ["2003", "367"], ["2004", "263"], ["2005", "286"], ["2006", "354"], ["2007", "382"], ["2008", "294"], ["2009", "290"], ["2010", "284"], ["2011", "300"], ["2012", "299"], ["2013", "363"], ["2014", "300"]], "label": "January" },
+				{ "data": [["1980", "328"], ["1981", "247"], ["1982", "267"], ["1983", "186"], ["1984", "220"], ["1985", "212"], ["1986", "204"], ["1987", "214"], ["1988", "183"], ["1989", "218"], ["1990", "260"], ["1991", "245"], ["1992", "323"], ["1993", "315"], ["1994", "387"], ["1995", "239"], ["1996", "327"], ["1997", "252"], ["1998", "245"], ["1999", "186"], ["2000", "174"], ["2001", "207"], ["2002", "188"], ["2003", "187"], ["2004", "242"], ["2005", "246"], ["2006", "290"], ["2007", "260"], ["2008", "250"], ["2009", "237"], ["2010", "238"], ["2011", "183"], ["2012", "191"], ["2013", "222"], ["2014", "263"]], "label": "February" },
+				{ "data": [["1980", "292"], ["1981", "315"], ["1982", "233"], ["1983", "232"], ["1984", "198"], ["1985", "200"], ["1986", "204"], ["1987", "182"], ["1988", "219"], ["1989", "219"], ["1990", "281"], ["1991", "296"], ["1992", "318"], ["1993", "368"], ["1994", "433"], ["1995", "321"], ["1996", "267"], ["1997", "284"], ["1998", "273"], ["1999", "218"], ["2000", "287"], ["2001", "231"], ["2002", "257"], ["2003", "281"], ["2004", "288"], ["2005", "297"], ["2006", "322"], ["2007", "267"], ["2008", "286"], ["2009", "314"], ["2010", "332"], ["2011", "290"], ["2012", "265"], ["2013", "265"], ["2014", "302"]], "label": "March" },
+				{ "data": [["1980", "328"], ["1981", "241"], ["1982", "251"], ["1983", "223"], ["1984", "179"], ["1985", "201"], ["1986", "227"], ["1987", "184"], ["1988", "199"], ["1989", "200"], ["1990", "318"], ["1991", "325"], ["1992", "364"], ["1993", "340"], ["1994", "356"], ["1995", "641"], ["1996", "279"], ["1997", "301"], ["1998", "206"], ["1999", "190"], ["2000", "232"], ["2001", "204"], ["2002", "269"], ["2003", "239"], ["2004", "308"], ["2005", "295"], ["2006", "344"], ["2007", "288"], ["2008", "288"], ["2009", "280"], ["2010", "368"], ["2011", "291"], ["2012", "337"], ["2013", "279"], ["2014", "260"]], "label": "April" },
+				{ "data": [["1980", "290"], ["1981", "213"], ["1982", "265"], ["1983", "192"], ["1984", "157"], ["1985", "179"], ["1986", "181"], ["1987", "229"], ["1988", "216"], ["1989", "245"], ["1990", "308"], ["1991", "298"], ["1992", "305"], ["1993", "326"], ["1994", "314"], ["1995", "317"], ["1996", "290"], ["1997", "258"], ["1998", "252"], ["1999", "209"], ["2000", "282"], ["2001", "256"], ["2002", "255"], ["2003", "210"], ["2004", "296"], ["2005", "303"], ["2006", "298"], ["2007", "311"], ["2008", "271"], ["2009", "332"], ["2010", "365"], ["2011", "377"], ["2012", "283"], ["2013", "287"], ["2014", "302"]], "label": "May" },
+				{ "data": [["1980", "359"], ["1981", "208"], ["1982", "242"], ["1983", "206"], ["1984", "159"], ["1985", "175"], ["1986", "204"], ["1987", "231"], ["1988", "219"], ["1989", "227"], ["1990", "314"], ["1991", "379"], ["1992", "370"], ["1993", "364"], ["1994", "341"], ["1995", "353"], ["1996", "303"], ["1997", "288"], ["1998", "223"], ["1999", "191"], ["2000", "258"], ["2001", "282"], ["2002", "267"], ["2003", "274"], ["2004", "221"], ["2005", "327"], ["2006", "396"], ["2007", "371"], ["2008", "353"], ["2009", "325"], ["2010", "321"], ["2011", "359"], ["2012", "254"], ["2013", "279"], ["2014", "271"]], "label": "June" },
+				{ "data": [["1980", "464"], ["1981", "277"], ["1982", "219"], ["1983", "235"], ["1984", "212"], ["1985", "185"], ["1986", "237"], ["1987", "249"], ["1988", "278"], ["1989", "270"], ["1990", "436"], ["1991", "407"], ["1992", "350"], ["1993", "377"], ["1994", "390"], ["1995", "338"], ["1996", "326"], ["1997", "296"], ["1998", "248"], ["1999", "270"], ["2000", "245"], ["2001", "313"], ["2002", "285"], ["2003", "286"], ["2004", "303"], ["2005", "349"], ["2006", "418"], ["2007", "375"], ["2008", "343"], ["2009", "414"], ["2010", "390"], ["2011", "354"], ["2012", "373"], ["2013", "316"], ["2014", "322"]], "label": "July" },
+				{ "data": [["1980", "477"], ["1981", "214"], ["1982", "251"], ["1983", "243"], ["1984", "200"], ["1985", "238"], ["1986", "237"], ["1987", "184"], ["1988", "286"], ["1989", "303"], ["1990", "399"], ["1991", "500"], ["1992", "435"], ["1993", "435"], ["1994", "467"], ["1995", "394"], ["1996", "259"], ["1997", "257"], ["1998", "279"], ["1999", "268"], ["2000", "278"], ["2001", "275"], ["2002", "338"], ["2003", "266"], ["2004", "306"], ["2005", "319"], ["2006", "336"], ["2007", "369"], ["2008", "317"], ["2009", "303"], ["2010", "313"], ["2011", "276"], ["2012", "379"], ["2013", "343"], ["2014", "335"]], "label": "August" },
+				{ "data": [["1980", "361"], ["1981", "223"], ["1982", "195"], ["1983", "222"], ["1984", "216"], ["1985", "191"], ["1986", "206"], ["1987", "192"], ["1988", "279"], ["1989", "275"], ["1990", "361"], ["1991", "426"], ["1992", "375"], ["1993", "381"], ["1994", "368"], ["1995", "283"], ["1996", "267"], ["1997", "263"], ["1998", "239"], ["1999", "253"], ["2000", "260"], ["2001", "260"], ["2002", "309"], ["2003", "263"], ["2004", "259"], ["2005", "260"], ["2006", "348"], ["2007", "330"], ["2008", "314"], ["2009", "298"], ["2010", "306"], ["2011", "300"], ["2012", "276"], ["2013", "326"], ["2014", "268"]], "label": "September" },
+				{ "data": [["1980", "362"], ["1981", "211"], ["1982", "245"], ["1983", "177"], ["1984", "190"], ["1985", "196"], ["1986", "214"], ["1987", "215"], ["1988", "268"], ["1989", "300"], ["1990", "367"], ["1991", "407"], ["1992", "319"], ["1993", "406"], ["1994", "376"], ["1995", "382"], ["1996", "299"], ["1997", "308"], ["1998", "266"], ["1999", "206"], ["2000", "272"], ["2001", "275"], ["2002", "294"], ["2003", "303"], ["2004", "279"], ["2005", "348"], ["2006", "351"], ["2007", "298"], ["2008", "295"], ["2009", "324"], ["2010", "287"], ["2011", "236"], ["2012", "325"], ["2013", "274"], ["2014", "270"]], "label": "October" },
+				{ "data": [["1980", "281"], ["1981", "181"], ["1982", "226"], ["1983", "181"], ["1984", "241"], ["1985", "152"], ["1986", "143"], ["1987", "168"], ["1988", "193"], ["1989", "236"], ["1990", "214"], ["1991", "312"], ["1992", "348"], ["1993", "383"], ["1994", "320"], ["1995", "313"], ["1996", "260"], ["1997", "301"], ["1998", "204"], ["1999", "181"], ["2000", "206"], ["2001", "279"], ["2002", "242"], ["2003", "311"], ["2004", "225"], ["2005", "286"], ["2006", "255"], ["2007", "320"], ["2008", "250"], ["2009", "352"], ["2010", "265"], ["2011", "263"], ["2012", "252"], ["2013", "286"], ["2014", "310"]], "label": "November" },
+				{ "data": [["1980", "297"], ["1981", "178"], ["1982", "181"], ["1983", "220"], ["1984", "234"], ["1985", "163"], ["1986", "217"], ["1987", "166"], ["1988", "208"], ["1989", "240"], ["1990", "233"], ["1991", "369"], ["1992", "374"], ["1993", "335"], ["1994", "313"], ["1995", "288"], ["1996", "343"], ["1997", "244"], ["1998", "277"], ["1999", "203"], ["2000", "212"], ["2001", "256"], ["2002", "269"], ["2003", "237"], ["2004", "205"], ["2005", "351"], ["2006", "343"], ["2007", "290"], ["2008", "224"], ["2009", "257"], ["2010", "249"], ["2011", "255"], ["2012", "283"], ["2013", "245"], ["2014", "282"]], "label": "December" }];
+				return temp;
+			}
+
+		});
+
+
+	</script>
+</body>
+
+</html>
